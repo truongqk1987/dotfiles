@@ -13,9 +13,10 @@ brew install git curl
 brew install tmux tmuxinator
 brew install neovim
 brew install node yarn nvm
-brew install nvm
 brew install cmake
 brew install bat asdf fzf tree
+brew install exa
+brew install jq thefuck
 
 # Apps
 brew install --cask google-chrome

@@ -12,14 +12,12 @@ plugins=(
     fzf
 )
 
-# User configuration
+# ENVs 
 export EDITOR="nvim"
 export TERM="xterm-256color"
 export PATH=$HOME/bin:$PATH
-
-# Folder paths
-export WORKING_SPACE=~/Projects
-export PERSONAL_PROJECTS=~/Pets
+export WORKSPACE=~/Projects
+export PETSPACE=~/Pets
 
 source $ZSH/oh-my-zsh.sh
 

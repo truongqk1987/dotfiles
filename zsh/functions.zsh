@@ -23,12 +23,22 @@ ctc() {
 gcc() {
   git reset --hard;
   git clean -df
-  git checkout master;
-  git pull -f origin master;
-  git checkout -b $1;
+  git checkout $1;
+  git pull -f origin $1;
+  git checkout -b $2;
 }
 
 # Reset zsh aliases
 delAliases() {
   unalias -m '*'
+}
+
+personalSSH() {
+  ssh-add -D
+  ssh-add ~/.ssh/personal/id_rsa
+}
+
+officeSSH() {
+  ssh-add -D
+  ssh-add ~/.ssh/id_rsa
 }

@@ -8,7 +8,6 @@
 brew tap homebrew/cask
 
 # Commands
-brew install docker
 brew install git curl
 brew install tmux tmuxinator
 brew install neovim
@@ -26,6 +25,12 @@ brew install --cask zoom
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask mockoon
+brew install --cask obsidian
+brew install --cask gotiengviet
+brew install --cask drawio
+brew install --cask tor-browser
+brew install --cask docker
+
 
 # Trusting Social
 brew install --cask pritunl 
@@ -42,6 +47,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Install vim-plug (https://github.com/junegunn/vim-plug)
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# Make default folders
+mkdir ~/Pets 
+mkdir ~/Projects
+
+# Refesh ZSHRC
+szsh
+
+# Move SSH
+cp -TRv ~/dotfiles/.ssh/ ~/.ssh
 
 
 

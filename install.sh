@@ -56,7 +56,7 @@ mkdir ~/Projects
 szsh
 
 # Move SSH
-cp -TRv ~/dotfiles/.ssh/ ~/.ssh
+# cp -TRv ~/dotfiles/.ssh/ ~/.ssh
 
 
 

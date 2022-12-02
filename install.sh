@@ -1,14 +1,23 @@
 #!/bin/sh
 
+
+# Set admin
+sudo
+
+# Make default folders
+mkdir ~/Pets 
+mkdir ~/Projects
+
 # Homebrew Script for OSX
 # To execute: save and `chmod +x ./brew-install-script.sh` then `./brew-install-script.sh`
-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew tap homebrew/cask
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/truongqk1987/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/truongqk1987/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 # Commands
-brew install git curl
 brew install tmux tmuxinator
 brew install neovim
 brew install node yarn nvm
@@ -48,15 +57,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# Make default folders
-mkdir ~/Pets 
-mkdir ~/Projects
+
 
 # Refesh ZSHRC
 szsh
-
-# Move SSH
-# cp -TRv ~/dotfiles/.ssh/ ~/.ssh
 
 
 

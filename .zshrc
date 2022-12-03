@@ -25,12 +25,6 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh
 
-# Fzf functions
-source $DOTFILES/zsh/fzf.zsh
-
-# Allow [ or ] whereever you want
-unsetopt nomatch
-
 # Setup NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh

@@ -57,10 +57,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+# Copy file config
+cp -fr ~/dotfiles/.zshrc ~/
+cp -fr ~/dotfiles/.tmux.conf ~/
 
-
-# Refesh ZSHRC
-szsh
 
 
 

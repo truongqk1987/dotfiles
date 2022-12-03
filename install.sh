@@ -60,7 +60,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # Copy file config
 cp -fR ~/dotfiles/.zshrc ~/
 cp -fR ~/dotfiles/.tmux.conf ~/
-cp -fR ~/dotfiles/nvim ~/.config
+mkdir ~/.config/nvim
+cp -fR ~/dotfiles/nvim/init.vim ~/.config/nvim
 
 
 

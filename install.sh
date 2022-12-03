@@ -44,6 +44,9 @@ brew install --cask docker
 # Trusting Social
 brew install --cask pritunl 
 
+# Request for M2 machine
+npm i -g node-gyp
+
 # Install Oh My Zsh (https://github.com/robbyrussell/oh-my-zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -62,6 +65,10 @@ cp -fR ~/dotfiles/.zshrc ~/
 cp -fR ~/dotfiles/.tmux.conf ~/
 mkdir ~/.config/nvim
 cp -fR ~/dotfiles/nvim/init.vim ~/.config/nvim
+
+# Call 2 times for create ssh keys (Personal + Office)
+ssh-keygen # Office ~/.ssh/id_rsa
+ssh-keygen # Personal ~/.ssh/personal/id_rsa
 
 
 

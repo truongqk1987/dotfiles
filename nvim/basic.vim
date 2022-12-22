@@ -14,9 +14,17 @@ set nobackup
 set history=1000
 set splitright
 set splitbelow
-
+set clipboard=unnamedplus
+set hidden
+set inccommand=split
+set mouse=a
+set completeopt=noinsert,menuone,noselect
 set number
 set cursorline
+set splitbelow splitright
+set title
+set ttimeoutlen=0
+set wildmenu
 
 " Space/Tab indent
 set shiftwidth=4

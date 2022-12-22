@@ -17,8 +17,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" ALE
-" Fix files automatically on save
-let g:ale_fix_on_save = 1
-highlight Comment ctermfg=grey
+" Fzf
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+nnoremap <silent> <C-f> :Files<CR>
 

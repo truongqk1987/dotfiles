@@ -30,15 +30,16 @@ brew install jq thefuck
 brew install --cask google-chrome
 brew install --cask ngrok
 brew install --cask slack
-brew install --cask zoom
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask mockoon
 brew install --cask obsidian
 brew install --cask gotiengviet
 brew install --cask drawio
-brew install --cask tor-browser
 brew install --cask docker
+brew install --cask postman postman-agent postman-cli
+brew install --cask orbstack
+brew install --cask warp
 
 
 # Trusting Social
@@ -67,8 +68,9 @@ mkdir ~/.config/nvim
 cp -fR ~/dotfiles/nvim/init.vim ~/.config/nvim
 
 # Call 2 times for create ssh keys (Personal + Office)
-ssh-keygen # Office ~/.ssh/id_rsa
-ssh-keygen # Personal ~/.ssh/personal/id_rsa
+# ssh-keygen -t rsa -b 4096 -C "truongqk1987@gmail.com"
+# - Main ~/.ssh/id_rsa
+# - Personal ~/.ssh/personal/id_rsa
 
 
 

@@ -33,12 +33,12 @@ delAliases() {
   unalias -m '*'
 }
 
-personalSSH() {
+getPersonalSSH() {
   ssh-add -D
   ssh-add ~/.ssh/personal/id_rsa
 }
 
-officeSSH() {
+getMainSSH() {
   ssh-add -D
   ssh-add ~/.ssh/id_rsa
 }

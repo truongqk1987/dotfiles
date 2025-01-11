@@ -15,11 +15,9 @@ plugins=(
 # ENVs 
 export EDITOR="nvim"
 export TERM="xterm-256color"
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:GOPATH/bin
 export WORKSPACE=~/Projects
 export PETSPACE=~/Pets
-
-source $ZSH/oh-my-zsh.sh
 
 # Alias & Functions
 source $DOTFILES/zsh/aliases.zsh

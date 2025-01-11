@@ -9,14 +9,15 @@ ZSH_THEME="amuse"
 plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
+    fzf
 )
 
-# ENVs 
+# ENV params
 export EDITOR="nvim"
 export TERM="xterm-256color"
-export PATH=$HOME/bin:GOPATH/bin
 export WORKSPACE=~/Projects
 export PETSPACE=~/Pets
+export PATH="/usr/bin:$PATH"
 
 # Alias & Functions
 source $DOTFILES/zsh/aliases.zsh

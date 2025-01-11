@@ -16,5 +16,5 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # System
-alias szsh="source ~/.zshrc; echo 'Reload zshrc completed!';"
+alias szsh="cp ~/dotfiles/.zshrc ~; source $ZSH/oh-my-zsh.sh; source ~/.zshrc; echo 'Reload zshrc completed!';"
 alias sdown="sudo shutdown -h now"

@@ -42,3 +42,12 @@ useMainSSH() {
   ssh-add -D
   ssh-add ~/.ssh/id_rsa
 }
+
+genSSHKey() {
+  ssh-keygen -t rsa
+}
+
+copySSH() {
+  cat ~/.ssh/id_rsa.pub | pbcopy
+}
+

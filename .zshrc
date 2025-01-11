@@ -9,7 +9,6 @@ ZSH_THEME="amuse"
 plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
-    fzf
 )
 
 # ENVs 

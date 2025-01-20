@@ -41,11 +41,7 @@ brew install --cask postman postman-agent postman-cli
 brew install --cask orbstack
 brew install --cask warp
 
-
-# Trusting Social
-brew install --cask pritunl 
-
-# Request for M2 machine
+# Request for Apple chip
 npm i -g node-gyp
 
 # Install Oh My Zsh (https://github.com/robbyrussell/oh-my-zsh)
@@ -61,16 +57,20 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# Copy file config
+# Init zsh
 cp -fR ~/dotfiles/.zshrc ~/
+source $ZSH/oh-my-zsh.sh
+source ~/.zshrc
+
+# Init tmux
 cp -fR ~/dotfiles/.tmux.conf ~/
+
+# Init nvim
 mkdir ~/.config/nvim
 cp -fR ~/dotfiles/nvim/init.vim ~/.config/nvim
 
-# Call 2 times for create ssh keys (Personal + Office)
-# ssh-keygen -t rsa -b 4096 -C "truongqk1987@gmail.com"
-# - Main ~/.ssh/id_rsa
-# - Personal ~/.ssh/personal/id_rsa
+# Generate SSH key for github
+ssh-keygen -t rsa
 
 
 

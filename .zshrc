@@ -17,7 +17,7 @@ export EDITOR="nvim"
 export TERM="xterm-256color"
 export WORKSPACE=~/Projects
 export PETSPACE=~/Pets
-export PATH="/usr/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:/usr/bin:$PATH"
 # Alias & Functions
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh

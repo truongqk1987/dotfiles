@@ -21,6 +21,8 @@ ctc() {
 
 # Checkout new branch
 gcc() {
+  read "confirm?This will discard ALL local changes (git reset --hard + clean -df). Continue? [y/N] "
+  [[ "$confirm" == [yY] ]] || return 1
   git reset --hard;
   git clean -df
   git checkout $1;
@@ -44,7 +46,7 @@ useMainSSH() {
 }
 
 genSSHKey() {
-  ssh-keygen -t rsa
+  ssh-keygen -t ed25519
 }
 
 copySSH() {

@@ -22,6 +22,14 @@ export PATH="$HOME/.local/bin:/usr/bin:$PATH"
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh
 
-# Setup NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# Setup NVM (lazy-loaded for faster shell startup)
+export NVM_DIR="$HOME/.nvm"
+nvm_lazy_load() {
+  unset -f nvm node npm npx yarn
+  source "$(brew --prefix nvm)/nvm.sh"
+}
+nvm() { nvm_lazy_load; nvm "$@"; }
+node() { nvm_lazy_load; node "$@"; }
+npm() { nvm_lazy_load; npm "$@"; }
+npx() { nvm_lazy_load; npx "$@"; }
+yarn() { nvm_lazy_load; yarn "$@"; }

@@ -16,29 +16,8 @@ grep -qxF 'eval "$(/opt/homebrew/bin/brew shellenv)"' "$HOME/.zprofile" 2>/dev/n
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
-# Commands
-brew install tmux tmuxinator
-brew install neovim
-brew install node yarn nvm
-brew install cmake
-brew install bat asdf fzf tree
-brew install exa
-brew install jq thefuck
-
-# Apps
-brew install --cask google-chrome
-brew install --cask ngrok
-brew install --cask slack
-brew install --cask visual-studio-code
-brew install --cask iterm2
-brew install --cask mockoon
-brew install --cask obsidian
-brew install --cask gotiengviet
-brew install --cask drawio
-brew install --cask docker
-brew install --cask postman postman-agent postman-cli
-brew install --cask orbstack
-brew install --cask warp
+# Commands & Apps
+brew bundle --file="$DOTFILES/Brewfile"
 
 # Request for Apple chip
 npm i -g node-gyp
@@ -72,7 +51,7 @@ ln -sf "$DOTFILES/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 ln -sf "$DOTFILES/nvim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
 
 # Generate SSH key for github
-[ -f "$HOME/.ssh/id_rsa" ] || ssh-keygen -t rsa
+[ -f "$HOME/.ssh/id_ed25519" ] || ssh-keygen -t ed25519
 
 
 

@@ -12,12 +12,16 @@ plugins=(
     fzf
 )
 
+# KHỞI CHẠY OH MY ZSH (Đây là dòng bạn đang thiếu)
+source $ZSH/oh-my-zsh.sh
+
 # ENV params
 export EDITOR="nvim"
 export TERM="xterm-256color"
 export WORKSPACE=~/Projects
 export PETSPACE=~/Pets
-export PATH="$HOME/.local/bin:/usr/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
 # Alias & Functions
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh
